@@ -290,6 +290,7 @@ class SliderThemeData with Diagnosticable {
     this.valueIndicatorTextStyle,
     this.minThumbSeparation,
     this.thumbSelector,
+    this.tickMarkPadding,
   });
 
   /// Generates a SliderThemeData from three main colors.
@@ -561,6 +562,11 @@ class SliderThemeData with Diagnosticable {
   /// Override this for custom thumb selection.
   final RangeThumbSelector? thumbSelector;
 
+  /// Applies padding to first and last tick marks.
+  ///
+  /// If null, it will take value of [trackHeight/2]
+  final double? tickMarkPadding;
+
   /// Creates a copy of this object but with the given fields replaced with the
   /// new values.
   SliderThemeData copyWith({
@@ -591,6 +597,7 @@ class SliderThemeData with Diagnosticable {
     TextStyle? valueIndicatorTextStyle,
     double? minThumbSeparation,
     RangeThumbSelector? thumbSelector,
+    double? tickMarkPadding,
   }) {
     return SliderThemeData(
       trackHeight: trackHeight ?? this.trackHeight,
@@ -620,6 +627,7 @@ class SliderThemeData with Diagnosticable {
       valueIndicatorTextStyle: valueIndicatorTextStyle ?? this.valueIndicatorTextStyle,
       minThumbSeparation: minThumbSeparation ?? this.minThumbSeparation,
       thumbSelector: thumbSelector ?? this.thumbSelector,
+      tickMarkPadding: tickMarkPadding ?? this.tickMarkPadding,
     );
   }
 

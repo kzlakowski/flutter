@@ -608,6 +608,7 @@ class _RangeSliderState extends State<RangeSlider> with TickerProviderStateMixin
       ),
       minThumbSeparation: sliderTheme.minThumbSeparation ?? _defaultMinThumbSeparation,
       thumbSelector: sliderTheme.thumbSelector ?? _defaultRangeThumbSelector,
+      tickMarkPadding: sliderTheme.tickMarkPadding,
     );
 
     // This size is used as the max bounds for the painting of the value
@@ -1330,16 +1331,19 @@ class _RenderRangeSlider extends RenderBox with RelayoutWhenSystemFontsChangeMix
         isEnabled: isEnabled,
         sliderTheme: _sliderTheme,
       ).width;
-      final double padding = trackRect.height;
-      final double adjustedTrackWidth = trackRect.width - padding;
       // If the tick marks would be too dense, don't bother painting them.
-      if (adjustedTrackWidth / divisions! >= 3.0 * tickMarkWidth) {
+      if (trackRect.width / divisions! >= 3.0 * tickMarkWidth) {
         final double dy = trackRect.center.dy;
         for (int i = 0; i <= divisions!; i++) {
           final double value = i / divisions!;
           // The ticks are mapped to be within the track, so the tick mark width
           // must be subtracted from the track width.
-          final double dx = trackRect.left + value * adjustedTrackWidth + padding / 2;
+          double dx = trackRect.left + value * trackRect.width;
+          // Apply padding only to first and last tick marks
+          if(i==0)
+            dx += sliderTheme.tickMarkPadding ?? trackRect.height/2;
+          if(i==divisions)
+            dx -= sliderTheme.tickMarkPadding ?? trackRect.height/2;
           final Offset tickMarkOffset = Offset(dx, dy);
           _sliderTheme.rangeTickMarkShape!.paint(
             context,
