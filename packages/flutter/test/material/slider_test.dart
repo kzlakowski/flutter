@@ -1207,9 +1207,9 @@ void main() {
         material,
         paints
           ..circle(x: 26.0, y: 24.0, radius: 1.0)
-          ..circle(x: 213.0, y: 24.0, radius: 1.0)
+          ..circle(x: 212.0, y: 24.0, radius: 1.0)
           ..circle(x: 400.0, y: 24.0, radius: 1.0)
-          ..circle(x: 587.0, y: 24.0, radius: 1.0)
+          ..circle(x: 588.0, y: 24.0, radius: 1.0)
           ..circle(x: 774.0, y: 24.0, radius: 1.0)
           ..circle(x: 24.0, y: 24.0, radius: 10.0),
       );
@@ -1224,9 +1224,9 @@ void main() {
         paints
           ..circle(x: 111.20703125, y: 24.0, radius: 5.687664985656738)
           ..circle(x: 26.0, y: 24.0, radius: 1.0)
-          ..circle(x: 213.0, y: 24.0, radius: 1.0)
+          ..circle(x: 212.0, y: 24.0, radius: 1.0)
           ..circle(x: 400.0, y: 24.0, radius: 1.0)
-          ..circle(x: 587.0, y: 24.0, radius: 1.0)
+          ..circle(x: 588.0, y: 24.0, radius: 1.0)
           ..circle(x: 774.0, y: 24.0, radius: 1.0)
           ..circle(x: 111.20703125, y: 24.0, radius: 10.0),
       );
@@ -1244,9 +1244,9 @@ void main() {
         paints
           ..circle(x: 190.0135726928711, y: 24.0, radius: 12.0)
           ..circle(x: 26.0, y: 24.0, radius: 1.0)
-          ..circle(x: 213.0, y: 24.0, radius: 1.0)
+          ..circle(x: 212.0, y: 24.0, radius: 1.0)
           ..circle(x: 400.0, y: 24.0, radius: 1.0)
-          ..circle(x: 587.0, y: 24.0, radius: 1.0)
+          ..circle(x: 588.0, y: 24.0, radius: 1.0)
           ..circle(x: 774.0, y: 24.0, radius: 1.0)
           ..circle(x: 190.0135726928711, y: 24.0, radius: 10.0),
       );
@@ -1258,9 +1258,9 @@ void main() {
         paints
           ..circle(x: 400.0, y: 24.0, radius: 24.0)
           ..circle(x: 26.0, y: 24.0, radius: 1.0)
-          ..circle(x: 213.0, y: 24.0, radius: 1.0)
+          ..circle(x: 212.0, y: 24.0, radius: 1.0)
           ..circle(x: 400.0, y: 24.0, radius: 1.0)
-          ..circle(x: 587.0, y: 24.0, radius: 1.0)
+          ..circle(x: 588.0, y: 24.0, radius: 1.0)
           ..circle(x: 774.0, y: 24.0, radius: 1.0)
           ..circle(x: 400.0, y: 24.0, radius: 10.0),
       );
@@ -1271,9 +1271,9 @@ void main() {
         material,
         paints
           ..circle(x: 26.0, y: 24.0, radius: 1.0)
-          ..circle(x: 213.0, y: 24.0, radius: 1.0)
+          ..circle(x: 212.0, y: 24.0, radius: 1.0)
           ..circle(x: 400.0, y: 24.0, radius: 1.0)
-          ..circle(x: 587.0, y: 24.0, radius: 1.0)
+          ..circle(x: 588.0, y: 24.0, radius: 1.0)
           ..circle(x: 774.0, y: 24.0, radius: 1.0)
           ..circle(x: 400.0, y: 24.0, radius: 10.0),
       );
