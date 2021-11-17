@@ -701,6 +701,7 @@ class SliderThemeData with Diagnosticable {
       valueIndicatorTextStyle,
       minThumbSeparation,
       thumbSelector,
+      tickMarkPadding,
     ]);
   }
 
@@ -739,7 +740,8 @@ class SliderThemeData with Diagnosticable {
         && other.showValueIndicator == showValueIndicator
         && other.valueIndicatorTextStyle == valueIndicatorTextStyle
         && other.minThumbSeparation == minThumbSeparation
-        && other.thumbSelector == thumbSelector;
+        && other.thumbSelector == thumbSelector
+        && other.tickMarkPadding == tickMarkPadding;
   }
 
   @override
