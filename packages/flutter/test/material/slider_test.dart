@@ -2517,4 +2517,49 @@ void main() {
       paints..rrect()..rrect()..rrect()..rrect()..rrect()..rrect(color: color),
     );
   });
+
+  testWidgets('tickMarkerPadding is correctly applied',
+      (WidgetTester tester) async {
+    Widget buildApp(double tickMarkPadding) => MaterialApp(
+          home: Material(
+            child: SliderTheme(
+              data: SliderThemeData(tickMarkPadding: tickMarkPadding),
+              child: Slider(
+                value: 0,
+                onChanged: (double newValue) {},
+                divisions: 4,
+              ),
+            ),
+          ),
+        );
+
+    await tester.pumpWidget(buildApp(24));
+
+    final MaterialInkController material =
+        Material.of(tester.element(find.byType(Slider)))!;
+
+    expect(
+      material,
+      paints
+        ..circle(x: 48.0, y: 300.0, radius: 1.0)
+        ..circle(x: 212.0, y: 300.0, radius: 1.0)
+        ..circle(x: 400.0, y: 300.0, radius: 1.0)
+        ..circle(x: 588.0, y: 300.0, radius: 1.0)
+        ..circle(x: 752.0, y: 300.0, radius: 1.0)
+        ..circle(x: 24.0, y: 300.0, radius: 10.0),
+    );
+
+    await tester.pumpWidget(buildApp(0));
+
+    expect(
+      material,
+      paints
+        ..circle(x: 24.0, y: 300.0, radius: 1.0)
+        ..circle(x: 212.0, y: 300.0, radius: 1.0)
+        ..circle(x: 400.0, y: 300.0, radius: 1.0)
+        ..circle(x: 588.0, y: 300.0, radius: 1.0)
+        ..circle(x: 776.0, y: 300.0, radius: 1.0)
+        ..circle(x: 24.0, y: 300.0, radius: 10.0),
+    );
+  });
 }
